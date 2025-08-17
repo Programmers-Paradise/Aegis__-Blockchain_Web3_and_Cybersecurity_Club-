@@ -3,7 +3,7 @@
 
 </p>
 
-<h1 align="center">Aegis Club</h1>
+<h1 align="center">Aegis </h1>
 
 <p align="center">
 <strong>Securing the Decentralized Future.</strong>
