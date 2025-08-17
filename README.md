@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/your-logo-code.png" alt="Aegis Club Logo" width="200"/>
+<img src="https://github.com/Programmers-Paradise/Aegis__Blockchain_Web3_and_Cybersecurity_Club-/blob/main/Assets/Blockchain%20and%20cysec%20logo%20png.png" width="200"/>
 
 </p>
 
