@@ -1,4 +1,4 @@
-# streamlit_poison_demo.py
+# PROJECT2.py
 # -------------------------------------------------------------
 # Live, interactive simulation of online learning under
 # data-poisoning attacks (label flips + simple backdoor trigger).
@@ -6,7 +6,7 @@
 # -------------------------------------------------------------
 # How to run:
 #   1) pip install streamlit scikit-learn numpy matplotlib
-#   2) streamlit run streamlit_poison_demo.py
+#   2) streamlit run PROJECT2.py
 # -------------------------------------------------------------
 
 import time
