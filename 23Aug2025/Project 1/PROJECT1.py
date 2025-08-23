@@ -1,5 +1,5 @@
 """
-security_analyzer.py
+PROJECT1.py
 
 AI-powered repository Security Analyzer that combines lightweight static checks
 with a **local LLM** (via Ollama) to review source files and produce actionable
@@ -25,7 +25,7 @@ Quickstart
 
 4) Streamlit UI:
 
-   streamlit run security_analyzer.py
+   streamlit run PROJECT1.py
 
 Notes
 -----
