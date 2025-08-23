@@ -1,0 +1,263 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AI Security Analyzer",
+          "informationUri": "https://localhost",
+          "version": "0.1"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "SEC010",
+          "level": "high",
+          "message": {
+            "text": "Dangerous function/param: Unsafe pickle deserialization"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\main.py"
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "SEC010",
+          "level": "high",
+          "message": {
+            "text": "Dangerous function/param: Use of eval()"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\utils.py"
+                },
+                "region": {
+                  "startLine": 131
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "SEC010",
+          "level": "high",
+          "message": {
+            "text": "Dangerous function/param: Use of eval()"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\utils.py"
+                },
+                "region": {
+                  "startLine": 146
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "medium",
+          "message": {
+            "text": "Potential Overfitting Due to Dropout Rate"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "medium",
+          "message": {
+            "text": "Potential Inefficiency in Model Forward Pass"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py"
+                },
+                "region": {
+                  "startLine": 18
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "medium",
+          "message": {
+            "text": "Potential Memory Usage Issues"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "medium",
+          "message": {
+            "text": "Potential Security Risk in Model Export"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py"
+                },
+                "region": {
+                  "startLine": 21
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "high",
+          "message": {
+            "text": "Dangerous function/param: Unsafe pickle deserialization"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\main.py"
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "high",
+          "message": {
+            "text": "Dangerous function/param: Use of eval()"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\utils.py"
+                },
+                "region": {
+                  "startLine": 131
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "high",
+          "message": {
+            "text": "Dangerous function/param: Use of eval()"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\utils.py"
+                },
+                "region": {
+                  "startLine": 146
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "medium",
+          "message": {
+            "text": "Unnecessary Duplicate Outputs from Discriminator Forward Method"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\models\\GAN.py"
+                },
+                "region": {
+                  "startLine": 39
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "medium",
+          "message": {
+            "text": "Potential Integer Overflow or Wrap-Around in Convolution Output Size Calculation"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\models\\GAN.py"
+                },
+                "region": {
+                  "startLine": 27
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "LLM_REVIEW",
+          "level": "medium",
+          "message": {
+            "text": "Potential Denial of Service via Infinite Loops in Discriminator Forward Method"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "D:\\Python\\EEG BCI\\models\\GAN.py"
+                },
+                "region": {
+                  "startLine": 45
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

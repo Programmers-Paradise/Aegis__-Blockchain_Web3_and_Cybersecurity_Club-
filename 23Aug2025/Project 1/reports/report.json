@@ -1,0 +1,195 @@
+{
+  "repo_root": "D:\\Python\\EEG BCI",
+  "model": "qwen2.5-coder:latest",
+  "created_at": "2025-08-23T09:46:49.847358Z",
+  "files": [
+    {
+      "path": "D:\\Python\\EEG BCI\\main.py",
+      "language": "python",
+      "loc": 163,
+      "sha1": null
+    },
+    {
+      "path": "D:\\Python\\EEG BCI\\train_classifier.py",
+      "language": "python",
+      "loc": 65,
+      "sha1": null
+    },
+    {
+      "path": "D:\\Python\\EEG BCI\\utils.py",
+      "language": "python",
+      "loc": 166,
+      "sha1": null
+    },
+    {
+      "path": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py",
+      "language": "python",
+      "loc": 23,
+      "sha1": null
+    },
+    {
+      "path": "D:\\Python\\EEG BCI\\models\\GAN.py",
+      "language": "python",
+      "loc": 55,
+      "sha1": null
+    }
+  ],
+  "findings": [
+    {
+      "file": "D:\\Python\\EEG BCI\\main.py",
+      "line": 30,
+      "col": 7,
+      "rule_id": "SEC010",
+      "title": "Dangerous function/param: Unsafe pickle deserialization",
+      "severity": "HIGH",
+      "cwe": "CWE-94",
+      "excerpt": "device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\r \r data = pickle.load(open(r'models\\CNN_Features\\features.pkl', 'rb'))\r label = data[:, -1]\r data = da",
+      "advice": null,
+      "engine": "heuristic"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\utils.py",
+      "line": 131,
+      "col": 18,
+      "rule_id": "SEC010",
+      "title": "Dangerous function/param: Use of eval()",
+      "severity": "HIGH",
+      "cwe": "CWE-94",
+      "excerpt": "ata))\r \r         if epoch % 100 == 0 or epoch == EPOCHS - 1:\r             model.eval()\r             with torch.no_grad():\r                 inputs = test_fea.view(-1,",
+      "advice": null,
+      "engine": "heuristic"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\utils.py",
+      "line": 146,
+      "col": 10,
+      "rule_id": "SEC010",
+      "title": "Dangerous function/param: Use of eval()",
+      "severity": "HIGH",
+      "cwe": "CWE-94",
+      "excerpt": "data_original, output_file_path=\"models/CNN_Features/features.pkl\"):\r     model.eval()\r     all_features = []\r \r     with torch.no_grad():\r         for inputs in tra",
+      "advice": null,
+      "engine": "heuristic"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py",
+      "line": 14,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Potential Overfitting Due to Dropout Rate",
+      "severity": "MEDIUM",
+      "cwe": "CWE-789: Improper Neutralization of Sensitive Data During Authentication or Session Management",
+      "excerpt": null,
+      "advice": "Adjust the dropout rate based on validation performance.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py",
+      "line": 18,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Potential Inefficiency in Model Forward Pass",
+      "severity": "MEDIUM",
+      "cwe": "CWE-789: Improper Neutralization of Sensitive Data During Authentication or Session Management",
+      "excerpt": null,
+      "advice": "Profile the forward pass for bottlenecks and optimize if necessary.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py",
+      "line": 19,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Potential Memory Usage Issues",
+      "severity": "MEDIUM",
+      "cwe": "CWE-789: Improper Neutralization of Sensitive Data During Authentication or Session Management",
+      "excerpt": null,
+      "advice": "Use in-place operations where possible to reduce memory usage.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\models\\CNNClassifier.py",
+      "line": 21,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Potential Security Risk in Model Export",
+      "severity": "MEDIUM",
+      "cwe": "CWE-789: Improper Neutralization of Sensitive Data During Authentication or Session Management",
+      "excerpt": null,
+      "advice": "Ensure that only necessary outputs are returned from the model.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\main.py",
+      "line": 30,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Dangerous function/param: Unsafe pickle deserialization",
+      "severity": "HIGH",
+      "cwe": "CWE-400",
+      "excerpt": null,
+      "advice": "Use a safer serialization library like `joblib` or `dill` instead of `pickle`. Ensure that the source of the serialized data is trusted.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\utils.py",
+      "line": 131,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Dangerous function/param: Use of eval()",
+      "severity": "HIGH",
+      "cwe": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+      "excerpt": null,
+      "advice": "Replace `eval()` with a safer alternative such as `ast.literal_eval()` if the input is trusted. If untrusted input is possible, consider validating or sanitizing the input before using `eval()`.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\utils.py",
+      "line": 146,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Dangerous function/param: Use of eval()",
+      "severity": "HIGH",
+      "cwe": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+      "excerpt": null,
+      "advice": "Replace `eval()` with a safer alternative such as `ast.literal_eval()` if the input is trusted. If untrusted input is possible, consider validating or sanitizing the input before using `eval()`.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\models\\GAN.py",
+      "line": 39,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Unnecessary Duplicate Outputs from Discriminator Forward Method",
+      "severity": "MEDIUM",
+      "cwe": "CWE-478: Return of Hardcoded Data or Sensitive Information",
+      "excerpt": null,
+      "advice": "Remove one of the redundant return values.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\models\\GAN.py",
+      "line": 27,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Potential Integer Overflow or Wrap-Around in Convolution Output Size Calculation",
+      "severity": "MEDIUM",
+      "cwe": "CWE-190: Integer Overflow or Wraparound",
+      "excerpt": null,
+      "advice": "Use a safer method or check for potential overflows before performing such calculations.",
+      "engine": "llm"
+    },
+    {
+      "file": "D:\\Python\\EEG BCI\\models\\GAN.py",
+      "line": 45,
+      "col": 0,
+      "rule_id": "LLM_REVIEW",
+      "title": "Potential Denial of Service via Infinite Loops in Discriminator Forward Method",
+      "severity": "MEDIUM",
+      "cwe": "CWE-839: Weak Randomness Used to Generate Cryptographic Keys",
+      "excerpt": null,
+      "advice": "Add checks to ensure that the concatenated tensor has the correct shape before performing concatenation.",
+      "engine": "llm"
+    }
+  ]
+}
